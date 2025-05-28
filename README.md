@@ -22,7 +22,7 @@ Whether you want to enhance YouTube, automate common tasks, or simplify your bro
 
 ---
 
-## 🛠️ Maintained by
+## 👨‍💻 Developed and Maintained by
 
 **[AhmedE404](https://github.com/ahmede404)** – building useful tools that prioritize simplicity and performance.
 
