@@ -87,8 +87,8 @@
                         const colorClass = colors[colorIndex % colors.length];
                         colorIndex++;
                         return `*/<span class="${colorClass}">${escapeHtml(content)}<br><span class="codeDelete-btn"></span></span>/*`;
-                    }).replace(/\/\*[\s\S]*?\*\//g, (match) => match.endsWith('.*/') ? match : 
-                    '<hr style="border:none;margin:0;"><span class="comment-green" dir="auto">' + escapeHtml(match) + '</span><br>'
+                    }).replace(/\/\*[\s\S]*?\*\//g, (match) => match.endsWith('.*/') ? ' ' + match + ' ' : 
+                    '<hr style="border:none;margin:0;"><span class="comment-green" dir="auto"> ' + escapeHtml(match) + ' </span><br>'
                     );
 
                     code.innerHTML = html;
@@ -590,7 +590,7 @@
             <hr><h3>📚 ادوات القراءة</h3>
             <a href="javascript:(()=>{(d=document.body.style).direction=d.direction=='rtl'?'ltr':'rtl'})();" class="bookmarklet" draggable="true">تبديل اتجاه النصوص لمشكلة اللغات المختلطة بالعربية</a>
             <a href="javascript:(()=>{(selTxt=window.getSelection().toString().trim())?window.open(`https://translate.google.com/?sl=auto&tl=ar&text=${encodeURIComponent(selTxt)}&op=translate`, '_blank'):alert('حدد نصًا أولاً للترجمة')})();" class="bookmarklet" draggable="true">حدد اي نص ثم اضعط للترجمة</a>
-            <a href="javascript:(()=>{window.__scrollInterval=window.__scrollInterval?(clearInterval(window.__scrollInterval),window.__scrollInterval=null):setInterval(()=>window.scrollBy({top:window.innerHeight//*ده رقم سرعة التمرير لو هتعدله الرقم لازم إنجليزي مش عربي*/100/*.*/,behavior:'smooth'}),50)})()" class="bookmarklet" draggable="true">تشغيل/ إيقاف التمرير التلقائى</a>
+            <a href="javascript:(()=>{window.__scrollInterval=window.__scrollInterval?(clearInterval(window.__scrollInterval),window.__scrollInterval=null):setInterval(()=>window.scrollBy({top:window.innerHeight/ /*ده رقم سرعة التمرير لو هتعدله الرقم لازم إنجليزي مش عربي*/100/*.*/,behavior:'smooth'}),50)})()" class="bookmarklet" draggable="true">تشغيل/ إيقاف التمرير التلقائى</a>
             <h5>إضعط علي التمرير التلقائى ضغطتين متتاليتين لتعديل رقم السرعة</h5>
             <hr><h3>🌍🕸️ جميع مواقع الويب</h3>
             <a href="javascript:(()=>{const existing = document.getElementById('__night_mode_css');if (existing) {existing.remove();} else {const css = `* { background-color: #111 !important; color: #eee !important; border-color: #444 !important; }/*الوضع الليلي للروابط*/a { color: #4da6ff !important; }/*جعل الصور والفيديو خافتين*/img, video { opacity: 0.8 !important; }/*الوضع الليلي للنص المحدد*/::selection { background: #555; color: white; }/*.*/`;const style = document.createElement('style');style.id = '__night_mode_css';style.innerHTML = css;document.head.appendChild(style);}})();" class="bookmarklet" draggable="true">تفعيل/إيقاف الوضع الليلي</a>
